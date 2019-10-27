@@ -1,16 +1,7 @@
 var budgetController =(function() {
-    var x = 23;
-
-    var add = function(a) {
-        return x + a;
-    }
-
-    return {
-        pulicTest: function(b){
-            return add(b);
-        }
-    }
+  
 })();
+
 
 
 var UIController = (function(){
@@ -18,13 +9,29 @@ var UIController = (function(){
 })();
 
 
+
 var controller = (function(budgetCtrl, UICtrl){
 
-    var z = budgetCtrl.pulicTest(6);
-    return {
-        anotherPulick: function() {
-            console.log(z);
-        }
+    var ctrlAddItem = function() {
+        //1. Get the fiels input date
+
+        //2. Add the item to the budget controller
+
+        //3. Add the item to UI
+
+        //4. Calcudate the budget
+
+        //5. Diplay the budget on the UI
+
+        console.log('aaa');
     }
-    
+
+    document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
+
+    document.addEventListener('keypress', function(e) {
+        if (e.keyCode === 13 || e.which === 13){
+            ctrlAddItem();
+        }
+    });
+
 })(budgetController, UIController);
